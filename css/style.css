@@ -34,31 +34,38 @@ body {
 
 /* Header & Nav */
 header {
-    background: rgba(13, 13, 13, 0.98);
+    background: rgba(0, 0, 0, 0.98); /* Pure black for logo consistency */
     padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(200, 168, 78, 0.3);
+    min-height: 140px; /* Room for the tall logo */
+    display: flex;
+    align-items: center;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    overflow: visible;
 }
 
 .logo-img {
-    height: 85px;
+    height: 130px; /* Large enough to show detail */
     width: auto;
+    object-fit: contain; /* DO NOT CROP */
     border-radius: 5px;
     transition: transform 0.3s;
+    display: block;
 }
 
 .logo-img:hover {
@@ -106,7 +113,7 @@ nav ul li a:hover {
     text-align: right;
     position: relative;
     overflow: hidden;
-    padding-top: 100px;
+    padding-top: 150px; /* Extra padding for taller header */
     background-color: var(--black);
 }
 
@@ -502,15 +509,13 @@ footer .logo {
 }
 
 footer .logo-img {
-    height: 100px;
-    opacity: 0.8;
-    filter: grayscale(0.5);
+    height: 120px; /* Large in footer too */
+    opacity: 0.9;
     transition: all 0.3s;
 }
 
 footer .logo-img:hover {
     opacity: 1;
-    filter: grayscale(0);
 }
 
 .footer-nav {
@@ -573,6 +578,12 @@ footer .logo-img:hover {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+    header {
+        min-height: 100px;
+    }
+    .logo-img {
+        height: 90px;
+    }
     .hero-flex-container {
         flex-direction: column;
         text-align: center;
@@ -596,6 +607,7 @@ footer .logo-img:hover {
 @media (max-width: 768px) {
     #hero {
         background: var(--black);
+        padding-top: 120px;
     }
     #hero h1 { 
         font-size: 2.5rem; 
