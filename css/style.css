@@ -168,35 +168,86 @@ nav ul li a:hover {
     border: 2px solid var(--gold);
 }
 
-/* About Section */
+/* About Section Update */
 #about {
     padding: 100px 0;
+    background-color: #111;
 }
 
-.about-grid {
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid var(--gold);
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.about-text h2 {
+.gallery-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border: 1px solid #333;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    border-color: var(--gold);
+}
+
+/* Contact Section */
+#contact {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-box {
+    background-color: #111;
+    padding: 60px;
+    border-radius: 20px;
+    border: 1px solid var(--gold);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-box h2 {
     font-size: 2.5rem;
     color: var(--gold);
     margin-bottom: 20px;
 }
 
-.img-placeholder {
-    width: 100%;
-    height: 400px;
-    background: var(--gray);
-    border: 1px solid var(--gold);
-    border-radius: 10px;
+.contact-box p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
-/* Responsive */
+.contact-box strong {
+    color: var(--green);
+}
+
+/* Responsive Update */
 @media (max-width: 768px) {
     #hero h1 { font-size: 2.5rem; }
     .about-grid { grid-template-columns: 1fr; }
     nav ul { display: none; }
+    .gallery-grid { grid-template-columns: 1fr; }
 }
