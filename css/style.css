@@ -214,6 +214,72 @@ nav ul li a:hover {
     border-color: var(--gold);
 }
 
+/* Testimonials Section */
+#testimonials {
+    padding: 100px 0;
+    background-color: #050505;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.testimonial-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    text-align: right;
+}
+
+.stars {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: 700;
+    color: var(--gold);
+}
+
+/* Social Links Section */
+#social {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    padding: 12px 30px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+.youtube { background-color: #ff0000; }
+.facebook { background-color: #1877f2; }
+.instagram { background-color: #e4405f; }
+
 /* Contact Section */
 #contact {
     padding: 100px 0;
