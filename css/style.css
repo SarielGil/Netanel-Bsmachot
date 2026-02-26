@@ -53,11 +53,21 @@ nav {
     width: 100%;
 }
 
+/* Logo with Treble Clef Symbol */
 .logo {
     display: flex;
     align-items: center;
     font-size: 1.8rem;
     font-weight: 800;
+    text-decoration: none;
+}
+
+.logo-symbol {
+    color: var(--green);
+    font-size: 2.2rem;
+    margin-left: 10px;
+    font-family: serif;
+    line-height: 1;
 }
 
 .gold { color: var(--gold); }
@@ -186,43 +196,41 @@ nav ul li a:hover {
     border: 2px solid var(--gold);
 }
 
-/* About Section Update */
-#about {
+/* Main Page About Section (Simplified) */
+#about-summary {
     padding: 100px 0;
     background-color: #111;
 }
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
+.about-summary-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.about-text h2 {
+.about-summary-content h2 {
     font-size: 2.5rem;
     color: var(--gold);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 1px solid var(--gold);
+.about-summary-content p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+/* Generic Section Styles */
+.section-title {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 /* Gallery Section */
 #gallery {
     padding: 100px 20px;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: var(--gold);
-    margin-bottom: 50px;
 }
 
 .gallery-grid {
@@ -245,7 +253,7 @@ nav ul li a:hover {
     border-color: var(--gold);
 }
 
-/* Services Section */
+/* Services Section (No Icons) */
 #services {
     padding: 100px 20px;
     background-color: #0d0d0d;
@@ -259,9 +267,9 @@ nav ul li a:hover {
 
 .service-card {
     background: #111;
-    padding: 40px 30px;
+    padding: 50px 30px;
     border-radius: 20px;
-    border-bottom: 2px solid var(--gold);
+    border-top: 2px solid var(--gold);
     transition: transform 0.3s, background 0.3s;
     text-align: center;
 }
@@ -269,19 +277,13 @@ nav ul li a:hover {
 .service-card:hover {
     transform: translateY(-10px);
     background: #1a1a1a;
-    border-bottom-color: var(--green);
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    display: block;
+    border-top-color: var(--green);
 }
 
 .service-card h3 {
     color: var(--gold);
     font-size: 1.8rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .service-card p {
@@ -315,17 +317,11 @@ nav ul li a:hover {
     padding: 15px;
     border-radius: 15px;
     border: 1px solid #333;
-    transition: transform 0.3s;
-}
-
-.video-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold);
 }
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 10px;
@@ -366,25 +362,17 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 15px;
     border-right: 4px solid var(--gold);
-    transition: transform 0.3s;
-}
-
-.faq-item:hover {
-    transform: translateX(-5px);
-    background: #1a1a1a;
 }
 
 .faq-item h3 {
     color: var(--gold);
     font-size: 1.4rem;
     margin-bottom: 15px;
-    line-height: 1.3;
 }
 
 .faq-item p {
     color: #ccc;
     font-size: 1.1rem;
-    line-height: 1.6;
 }
 
 /* Testimonials Section */
@@ -401,29 +389,20 @@ nav ul li a:hover {
 
 .testimonial-card {
     background: #111;
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
-    border-top: 3px solid var(--gold);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    text-align: right;
-}
-
-.stars {
-    color: var(--gold);
-    margin-bottom: 15px;
-}
-
-.testimonial-card p {
-    font-style: italic;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .author {
+    display: block;
+    margin-top: 20px;
     font-weight: 700;
     color: var(--gold);
+    font-size: 1.2rem;
 }
 
-/* Social Links Section */
+/* Social Links */
 #social {
     padding: 60px 0;
     text-align: center;
@@ -442,15 +421,9 @@ nav ul li a:hover {
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    transition: opacity 0.3s;
-}
-
-.social-btn:hover {
-    opacity: 0.8;
 }
 
 .youtube { background-color: #ff0000; }
-.facebook { background-color: #1877f2; }
 .instagram { background-color: #e4405f; }
 
 /* Contact Section */
@@ -491,12 +464,7 @@ footer {
     border-top: 1px solid #111;
 }
 
-footer .logo {
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-footer .footer-nav {
+.footer-nav {
     margin: 30px 0;
     display: flex;
     justify-content: center;
@@ -507,30 +475,11 @@ footer .footer-nav {
 .footer-nav a {
     color: #888;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.footer-nav a:hover {
-    color: var(--gold);
-}
-
-.footer-bottom {
-    border-top: 1px solid #111;
-    padding-top: 30px;
-    margin-top: 30px;
 }
 
 .footer-bottom p {
     font-size: 0.9rem;
     color: #555;
-    margin-bottom: 10px;
-}
-
-.footer-bottom p:first-child {
-    font-size: 1rem;
-    color: #777;
 }
 
 /* Mobile Menu Styles */
@@ -551,7 +500,6 @@ footer .footer-nav {
     height: 3px;
     background-color: var(--gold);
     border-radius: 10px;
-    transition: all 0.3s linear;
 }
 
 /* Responsive Styles */
@@ -560,7 +508,16 @@ footer .footer-nav {
         min-height: 80px;
     }
     .logo {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+    .logo-symbol {
+        font-size: 1.8rem;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
     }
     .hero-flex-container {
         flex-direction: column;
@@ -569,31 +526,10 @@ footer .footer-nav {
     .hero-image-side {
         order: -1;
         margin-bottom: 20px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
     }
     .hero-portrait-img {
-        max-width: 90%;
-        height: auto;
         max-height: 40vh;
         object-fit: contain;
-    }
-    #hero {
-        padding-top: 100px;
-        min-height: auto;
-        padding-bottom: 50px;
-    }
-    #hero h1 {
-        font-size: 2.5rem;
-        margin-top: 10px;
-    }
-    #hero p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-    }
-    .hero-overlay {
-        background: rgba(13, 13, 13, 0.85);
     }
 }
 
@@ -603,6 +539,9 @@ footer .footer-nav {
     }
     #hero {
         padding-top: 90px;
+    }
+    .mobile-menu-toggle {
+        display: flex;
     }
     .nav-links {
         position: fixed;
@@ -616,58 +555,19 @@ footer .footer-nav {
         align-items: center;
         transition: right 0.4s ease-in-out;
         z-index: 1000;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     }
-
     .nav-links.active {
         right: 0;
     }
-
     .nav-links li {
         margin: 20px 0;
         margin-right: 0;
     }
-
     .nav-links li a {
         font-size: 1.5rem;
     }
-
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
-    .mobile-menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .mobile-menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .mobile-menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .about-grid { grid-template-columns: 1fr; text-align: center; }
-    .gallery-grid { grid-template-columns: 1fr; }
-    .video-grid { grid-template-columns: 1fr; }
-    .services-grid { grid-template-columns: 1fr; }
-    .faq-grid { grid-template-columns: 1fr; }
-
-    .contact-box {
-        padding: 30px 15px;
-    }
-    .contact-box h2 {
-        font-size: 1.8rem;
-    }
     .contact-box p {
         font-size: 1.1rem;
-        word-break: keep-all;
-    }
-    
-    .cta-group {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
     }
     .btn {
         width: 100%;
@@ -675,5 +575,4 @@ footer .footer-nav {
         padding: 12px 20px;
     }
     .btn-primary { margin-left: 0; }
-    .footer-nav { gap: 10px; }
 }
