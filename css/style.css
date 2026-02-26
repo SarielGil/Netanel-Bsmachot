@@ -253,6 +253,11 @@ nav ul li a:hover {
     border-color: var(--gold);
 }
 
+.gallery-item a {
+    display: block;
+    text-decoration: none;
+}
+
 /* Services Section (No Icons) */
 #services {
     padding: 100px 20px;
@@ -449,7 +454,7 @@ nav ul li a:hover {
 
 .contact-box p {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .contact-box strong {
@@ -568,11 +573,19 @@ footer {
     }
     .contact-box p {
         font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
     .btn {
         width: 100%;
         max-width: 280px;
-        padding: 12px 20px;
+        padding: 14px 20px;
     }
     .btn-primary { margin-left: 0; }
+    .footer-nav { gap: 15px; }
 }
