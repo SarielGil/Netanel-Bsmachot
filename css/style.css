@@ -322,6 +322,44 @@ nav ul li a:hover {
     margin-top: 60px;
 }
 
+/* FAQ Section */
+#faq {
+    padding: 100px 20px;
+    background-color: #0d0d0d;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.faq-item {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border-right: 4px solid var(--gold);
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateX(-5px);
+    background: #1a1a1a;
+}
+
+.faq-item h3 {
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.faq-item p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
 /* Testimonials Section */
 #testimonials {
     padding: 100px 0;
