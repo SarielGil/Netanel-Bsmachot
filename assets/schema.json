@@ -1,0 +1,36 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "DJ נתנאל בשמחות",
+  "image": "https://SarielGil.github.io/Netanel-Bsmachot/assets/img/logo.jpg",
+  "@id": "https://SarielGil.github.io/Netanel-Bsmachot/",
+  "url": "https://SarielGil.github.io/Netanel-Bsmachot/",
+  "telephone": "052-3366442",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "נתניה",
+    "addressCountry": "IL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 32.3215,
+    "longitude": 34.8532
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "opens": "09:00",
+    "closes": "23:00"
+  },
+  "sameAs": [
+    "https://www.youtube.com/@elizaeth565",
+    "https://www.instagram.com/dj_netanelb_smahot/"
+  ],
+  "priceRange": "₪₪₪"
+}
