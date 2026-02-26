@@ -45,10 +45,14 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px; /* Adjust height as needed */
+    width: auto;
+    border-radius: 5px; /* Subtle rounding if needed */
 }
 
 .gold { color: var(--gold); }
