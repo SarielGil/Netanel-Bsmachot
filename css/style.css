@@ -34,14 +34,14 @@ body {
 
 /* Header & Nav */
 header {
-    background: rgba(0, 0, 0, 0.98); /* Pure black for logo consistency */
+    background: rgba(0, 0, 0, 0.98);
     padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(200, 168, 78, 0.3);
-    min-height: 140px; /* Room for the tall logo */
+    min-height: 80px;
     display: flex;
     align-items: center;
 }
@@ -56,20 +56,8 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    overflow: visible;
-}
-
-.logo-img {
-    height: 130px; /* Large enough to show detail */
-    width: auto;
-    object-fit: contain; /* DO NOT CROP */
-    border-radius: 5px;
-    transition: transform 0.3s;
-    display: block;
-}
-
-.logo-img:hover {
-    transform: scale(1.05);
+    font-size: 1.8rem;
+    font-weight: 800;
 }
 
 .gold { color: var(--gold); }
@@ -113,7 +101,7 @@ nav ul li a:hover {
     text-align: right;
     position: relative;
     overflow: hidden;
-    padding-top: 150px; /* Extra padding for taller header */
+    padding-top: 100px;
     background-color: var(--black);
 }
 
@@ -508,17 +496,7 @@ footer .logo {
     margin-bottom: 30px;
 }
 
-footer .logo-img {
-    height: 120px; /* Large in footer too */
-    opacity: 0.9;
-    transition: all 0.3s;
-}
-
-footer .logo-img:hover {
-    opacity: 1;
-}
-
-.footer-nav {
+footer .footer-nav {
     margin: 30px 0;
     display: flex;
     justify-content: center;
@@ -579,10 +557,10 @@ footer .logo-img:hover {
 /* Responsive Styles */
 @media (max-width: 992px) {
     header {
-        min-height: 100px;
+        min-height: 80px;
     }
-    .logo-img {
-        height: 70px;
+    .logo {
+        font-size: 1.4rem;
     }
     .hero-flex-container {
         flex-direction: column;
@@ -598,20 +576,20 @@ footer .logo-img:hover {
     .hero-portrait-img {
         max-width: 90%;
         height: auto;
-        max-height: 40vh; /* Prevents image from pushing text too far down */
+        max-height: 40vh;
         object-fit: contain;
     }
     #hero {
-        padding-top: 120px;
+        padding-top: 100px;
         min-height: auto;
         padding-bottom: 50px;
     }
     #hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         margin-top: 10px;
     }
     #hero p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: 30px;
     }
     .hero-overlay {
@@ -620,14 +598,11 @@ footer .logo-img:hover {
 }
 
 @media (max-width: 768px) {
-    .logo-img {
-        height: 60px;
-    }
     header {
-        min-height: 80px;
+        min-height: 70px;
     }
     #hero {
-        padding-top: 100px;
+        padding-top: 90px;
     }
     .nav-links {
         position: fixed;
@@ -657,6 +632,10 @@ footer .logo-img:hover {
         font-size: 1.5rem;
     }
 
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -680,7 +659,7 @@ footer .logo-img:hover {
         font-size: 1.8rem;
     }
     .contact-box p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         word-break: keep-all;
     }
     
@@ -696,6 +675,5 @@ footer .logo-img:hover {
         padding: 12px 20px;
     }
     .btn-primary { margin-left: 0; }
-    footer .logo-img { height: 80px; }
     .footer-nav { gap: 10px; }
 }
