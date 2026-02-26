@@ -214,6 +214,51 @@ nav ul li a:hover {
     border-color: var(--gold);
 }
 
+/* Services Section */
+#services {
+    padding: 100px 20px;
+    background-color: #0d0d0d;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #111;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border-bottom: 2px solid var(--gold);
+    transition: transform 0.3s, background 0.3s;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: #1a1a1a;
+    border-bottom-color: var(--green);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
 /* Testimonials Section */
 #testimonials {
     padding: 100px 0;
