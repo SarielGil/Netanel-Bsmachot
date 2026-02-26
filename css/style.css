@@ -610,7 +610,7 @@ footer .logo-img:hover {
         padding-top: 120px;
     }
     #hero h1 { 
-        font-size: 2.5rem; 
+        font-size: 2.2rem; 
     }
     #hero p {
         font-size: 1.1rem;
@@ -666,18 +666,28 @@ footer .logo-img:hover {
     .faq-grid { grid-template-columns: 1fr; }
 
     .contact-box {
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
     .contact-box h2 {
         font-size: 1.8rem;
+    }
+    .contact-box p {
+        font-size: 1.2rem;
+        word-break: keep-all;
     }
     
     .cta-group {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        align-items: center;
+    }
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
     }
     .btn-primary { margin-left: 0; }
     footer .logo-img { height: 80px; }
-    .footer-nav { gap: 15px; }
+    .footer-nav { gap: 10px; }
 }
